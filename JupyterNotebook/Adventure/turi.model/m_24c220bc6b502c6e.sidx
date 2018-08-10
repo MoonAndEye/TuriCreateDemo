@@ -1,0 +1,65 @@
+{
+	"sarray" : {
+		"version" : 2,
+		"num_segments" : 1
+	},
+	"segment_files" : {
+		"0000" : "m_24c220bc6b502c6e.0000"
+	},
+	"columns" : [
+		{
+			"content_type" : "",
+			"metadata" : {
+				"__type__" : "1"
+			},
+			"segment_sizes" : {
+				"0000" : "400004"
+			}
+		},
+		{
+			"content_type" : "",
+			"metadata" : {
+				"__type__" : "1"
+			},
+			"segment_sizes" : {
+				"0000" : "400004"
+			}
+		},
+		{
+			"content_type" : "",
+			"metadata" : {
+				"__type__" : "1"
+			},
+			"segment_sizes" : {
+				"0000" : "400004"
+			}
+		},
+		{
+			"content_type" : "",
+			"metadata" : {
+				"__type__" : "0"
+			},
+			"segment_sizes" : {
+				"0000" : "400004"
+			}
+		},
+		{
+			"content_type" : "",
+			"metadata" : {
+				"__type__" : "0"
+			},
+			"segment_sizes" : {
+				"0000" : "400004"
+			}
+		},
+		{
+			"content_type" : "",
+			"metadata" : {
+				"__type__" : "0"
+			},
+			"segment_sizes" : {
+				"0000" : "400004"
+			}
+		}
+	]
+}

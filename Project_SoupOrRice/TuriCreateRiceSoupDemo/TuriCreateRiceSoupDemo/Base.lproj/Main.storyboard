@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TuriCreateRiceSoupDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJY-Ff-V9I">
+                                <rect key="frame" x="20" y="40" width="335" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="QcX-jI-JDT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIn-zr-s2z">
+                                <rect key="frame" x="20" y="420" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5B-vp-nKS">
+                                <rect key="frame" x="97.5" y="584" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5KI-AY-SHQ"/>
+                                    <constraint firstAttribute="width" constant="180" id="GNi-Z4-WPy"/>
+                                </constraints>
+                                <state key="normal" title="Import from Camera"/>
+                                <connections>
+                                    <action selector="importButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chm-jv-zVK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YO-rX-S39">
+                                <rect key="frame" x="97.5" y="527" width="180" height="40"/>
+                                <state key="normal" title="Import from Photo Library"/>
+                                <connections>
+                                    <action selector="importFromPhotoLibraryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sO6-7S-ADa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cJY-Ff-V9I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dhg-gX-git"/>
+                            <constraint firstItem="cJY-Ff-V9I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Fwh-Vm-9lA"/>
+                            <constraint firstItem="4YO-rX-S39" firstAttribute="height" secondItem="m5B-vp-nKS" secondAttribute="height" id="PwP-lq-dYU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rIn-zr-s2z" secondAttribute="trailing" constant="20" id="Weh-3H-xaE"/>
+                            <constraint firstItem="m5B-vp-nKS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b1a-XR-kls"/>
+                            <constraint firstItem="rIn-zr-s2z" firstAttribute="top" secondItem="cJY-Ff-V9I" secondAttribute="bottom" constant="30" id="d8c-LQ-Bfs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m5B-vp-nKS" secondAttribute="bottom" constant="43" id="fxf-U9-92c"/>
+                            <constraint firstItem="4YO-rX-S39" firstAttribute="width" secondItem="m5B-vp-nKS" secondAttribute="width" id="pm5-3G-53G"/>
+                            <constraint firstItem="4YO-rX-S39" firstAttribute="centerX" secondItem="m5B-vp-nKS" secondAttribute="centerX" id="rGE-vt-x6W"/>
+                            <constraint firstItem="m5B-vp-nKS" firstAttribute="top" secondItem="4YO-rX-S39" secondAttribute="bottom" constant="17" id="vuj-2P-8YT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cJY-Ff-V9I" secondAttribute="trailing" constant="20" id="x1d-5d-5v5"/>
+                            <constraint firstItem="rIn-zr-s2z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yW7-MM-gcw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="importImageView" destination="cJY-Ff-V9I" id="NPm-VC-eRb"/>
+                        <outlet property="itemLabel" destination="rIn-zr-s2z" id="6c1-Tf-oiC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

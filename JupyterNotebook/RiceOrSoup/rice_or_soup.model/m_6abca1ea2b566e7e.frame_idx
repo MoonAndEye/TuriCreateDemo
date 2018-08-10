@@ -1,0 +1,11 @@
+[sframe]
+version=0
+num_segments=0
+num_columns=2
+nrows=16
+[column_names]
+0000=__image_features__
+0001=foodType
+[column_files]
+0000=m_6abca1ea2b566e7e.sidx:0
+0001=m_6abca1ea2b566e7e.sidx:1
