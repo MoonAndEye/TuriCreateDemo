@@ -8,11 +8,7 @@ This presentation was held at iChef on 7th Aug. 2018. The keynote file is below.
 
 There are two demo projects, one is judge the picture is Kaneshiro or not. The other one is judge the picture is soup or rice.
 
-![](https://github.com/MoonAndEye/TuriCreateDemo/blob/master/ResultNG_1.PNG)
-
-![](https://github.com/MoonAndEye/TuriCreateDemo/blob/master/ResultNG_2.PNG)
-
-![](https://github.com/MoonAndEye/TuriCreateDemo/blob/master/ResultPass_1.PNG)
+<kbd><img src="https://github.com/MoonAndEye/TuriCreateDemo/blob/master/ResultNG_1.PNG" width="375" height="667"></kbd>    <kbd><img src="https://github.com/MoonAndEye/TuriCreateDemo/blob/master/ResultNG_2.PNG" width="375" height="667"></kbd>    <kbd><img src="https://github.com/MoonAndEye/TuriCreateDemo/blob/master/ResultPass_1.PNG" width="375" height="667"></kbd>
 
 The model was create by Apple's package - Turi Create. This makes you easy to build a machine learning model very easy. 
 
