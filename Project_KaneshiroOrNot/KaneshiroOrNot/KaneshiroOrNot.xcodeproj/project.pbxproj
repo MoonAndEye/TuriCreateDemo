@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		734D269E212A94DF00A046C8 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D269D212A94DF00A046C8 /* SampleCollectionViewCell.swift */; };
+		734D26A0212A94F300A046C8 /* SampleGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D269F212A94F300A046C8 /* SampleGalleryViewController.swift */; };
 		73A8B0EC2118A46100C65170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8B0EB2118A46100C65170 /* AppDelegate.swift */; };
 		73A8B0EE2118A46100C65170 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8B0ED2118A46100C65170 /* ViewController.swift */; };
 		73A8B0F12118A46100C65170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A8B0EF2118A46100C65170 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		734D269D212A94DF00A046C8 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		734D269F212A94F300A046C8 /* SampleGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGalleryViewController.swift; sourceTree = "<group>"; };
 		73A8B0E82118A46100C65170 /* KaneshiroOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaneshiroOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A8B0EB2118A46100C65170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73A8B0ED2118A46100C65170 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				73A8B0F22118A46200C65170 /* Assets.xcassets */,
 				73A8B0F42118A46200C65170 /* LaunchScreen.storyboard */,
 				73A8B0F72118A46200C65170 /* Info.plist */,
+				734D269D212A94DF00A046C8 /* SampleCollectionViewCell.swift */,
+				734D269F212A94F300A046C8 /* SampleGalleryViewController.swift */,
 			);
 			path = KaneshiroOrNot;
 			sourceTree = "<group>";
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734D26A0212A94F300A046C8 /* SampleGalleryViewController.swift in Sources */,
 				73A8B0EE2118A46100C65170 /* ViewController.swift in Sources */,
 				73A8B0EC2118A46100C65170 /* AppDelegate.swift in Sources */,
+				734D269E212A94DF00A046C8 /* SampleCollectionViewCell.swift in Sources */,
 				73A8B1002118B00500C65170 /* kaneshiro.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

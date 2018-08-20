@@ -19,7 +19,42 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemLabel.text = "你是不是金成武"
+        itemLabel.text = "你是不是金城武"
+        
+    }
+    
+    func judgeKaneshiro(image: UIImage) {
+        importImageView.image = image
+        
+        // buffer size 只能調 224 x 224
+        if let buffer = image.buffer(with: CGSize(width: 224, height: 224)),
+            let prediction = try? mlModel.prediction(image: buffer) {
+            let kaneshiroOrNot = prediction.kaneshiroOrNot
+            guard let confidence = prediction.kaneshiroOrNotProbability[kaneshiroOrNot] else { return }
+            let confidenceString = String(format: "%.2f", confidence)
+            
+            var target: String?
+            if kaneshiroOrNot == "Kaneshiro" {
+                target = "是金城武"
+                itemLabel.textColor = .green
+            }
+            else
+            {
+                target = "不是金城武"
+                itemLabel.textColor = .red
+            }
+            
+            guard let unwrapTarget = target else { return }
+            
+            itemLabel.text = "分析結果: 這張照片\(unwrapTarget),信心: \(confidenceString)"
+        }
+    }
+    
+    @IBAction func importGalleryTapped(_ sender: UIButton) {
+        
+        let sampleGalleryVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SampleGalleryVC")
+        
+        self.navigationController?.pushViewController(sampleGalleryVC, animated: true)
         
     }
 
@@ -51,30 +86,8 @@ extension ViewController:  UIImagePickerControllerDelegate, UINavigationControll
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            importImageView.image = image
             
-            // buffer size 只能調 224 x 224
-            if let buffer = image.buffer(with: CGSize(width: 224, height: 224)),
-                let prediction = try? mlModel.prediction(image: buffer) {
-                let kaneshiroOrNot = prediction.kaneshiroOrNot
-                guard let confidence = prediction.kaneshiroOrNotProbability[kaneshiroOrNot] else { return }
-                let confidenceString = String(format: "%.2f", confidence)
-                
-                var target: String?
-                if kaneshiroOrNot == "Kaneshiro" {
-                    target = "是金城武"
-                    itemLabel.textColor = .green
-                }
-                else
-                {
-                    target = "不是金城武"
-                    itemLabel.textColor = .red
-                }
-                
-                guard let unwrapTarget = target else { return }
-                
-                itemLabel.text = "分析結果: 這張照片\(unwrapTarget),信心: \(confidenceString)"
-            }
+            judgeKaneshiro(image: image)
         }
         
         dismiss(animated: true, completion: nil)
